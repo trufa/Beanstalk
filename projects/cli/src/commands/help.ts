@@ -13,7 +13,8 @@ export const help = () => {
           name: "account",
           alias: "a",
           typeLabel: "{underline address}",
-          description: "Account to impersonate or run commands against. \n{gray Default: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266}",
+          description:
+            "Account to impersonate or run commands against. \n{gray Default: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266}",
           defaultValue: "0x123"
         },
         {
@@ -26,7 +27,8 @@ export const help = () => {
           name: "amount",
           alias: "m",
           typeLabel: "{underline number}",
-          description: "A human readable value specifying an amount. Ex: '5' for five ETH\n{gray Default: 50000}"
+          description:
+            "A human readable value specifying an amount. Ex: '5' for five ETH\n{gray Default: 50000}"
         },
         {
           name: "rpcUrl",
@@ -38,31 +40,42 @@ export const help = () => {
           name: "force",
           alias: "f",
           typeLabel: " ",
-          description: "forces a sunrise() by fastforwarding the blockchain time to the next hour first"
+          description:
+            "forces a sunrise() by fastforwarding the blockchain time to the next hour first"
         }
       ]
     },
     {
       header: "Commands",
       content: [
-        { name: "{bold.greenBright balance}", summary: "Display balance(s). Optionally specify account or token" },
-        { name: "{bold.greenBright setbalance}", summary: "Set balance(s). Optionally specify account, token, or amount" },
+        {
+          name: "{bold.greenBright balance}",
+          summary: "Display balance(s). Optionally specify account or token"
+        },
+        {
+          name: "{bold.greenBright setbalance}",
+          summary: "Set balance(s). Optionally specify account, token, or amount"
+        },
         {
           name: "{bold.greenBright setprice}",
-          summary: "Set BEAN price by setting liquidity. Defaults to 20M BEAN and 20M 3CRV. Parameters are millions. See examples below"
+          summary:
+            "Set BEAN price by setting liquidity. Defaults to 20M BEAN and 20M 3CRV. Parameters are millions. See examples below"
         },
         { name: "{bold.greenBright sunrise}", summary: "Calls the sunrise() function" },
         { name: "{bold.greenBright mine}", summary: "Mines a block (or more)" },
         { name: "{bold.greenBright deltab}", summary: "Display current DeltaB" },
         {
           name: "{bold.greenBright setpriceover}",
-          summary: "Buys enough BEANs to set DeltaB over 0, and the price over 1.00. Multiplier may be applied"
+          summary:
+            "Buys enough BEANs to set DeltaB over 0, and the price over 1.00. Multiplier may be applied"
         },
         {
           name: "{bold.greenBright setpriceunder}",
-          summary: "Sells enough BEANs to set DeltaB under 0, and the price under 1.00. Multiplier may be applied"
+          summary:
+            "Sells enough BEANs to set DeltaB under 0, and the price under 1.00. Multiplier may be applied"
         },
 
+        { name: "{bold.greenBright getprice}", summary: "Get BEAN price for current season" },
         { name: "{bold.greenBright help}", summary: "You're looking at it :)" }
       ]
     },
@@ -96,6 +109,10 @@ export const help = () => {
         {
           desc: "6. Call sunrise, forcing blockchain into the future",
           example: "$ bean sunrise --force"
+        },
+        {
+          desc: "7. Get BEAN price for current season",
+          example: "$ bean getprice"
         }
       ]
     },

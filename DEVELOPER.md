@@ -89,6 +89,7 @@ Some examples of what you can do with the bean cli:
 - Set balance of a specific token: `yarn g:bean setbalance -t BEAN -m 3000`
 - Make BEAN price above $1: `yarn g:bean setprice 20 30`
 - Fast forward season into future: `yarn g:bean sunrise --force`
+- Get BEAN price for season: `yarn g:bean getprice`
 
 `yarn g:bean --help` for all options
 

@@ -10,6 +10,7 @@ import { help } from "./commands/help.js";
 import { mineBlocks } from "./commands/mine.js";
 import { setDeltaB } from "./commands/setDeltaB.js";
 import { getDeltaB } from "./commands/getDeltaB.js";
+import { getPrice } from "./commands/getPrice.js";
 
 main().catch((e) => {
   console.log("FAILED:");
@@ -37,7 +38,11 @@ async function main() {
       await balance(sdk, { account: args.account, symbol: args.token });
       break;
     case "setbalance":
-      await setbalance(sdk, chain, { account: args.account, symbol: args.token, amount: args.amount });
+      await setbalance(sdk, chain, {
+        account: args.account,
+        symbol: args.token,
+        amount: args.amount
+      });
       break;
     case "sunrise":
       await sunrise(sdk, chain, { force: args.force });
@@ -58,6 +63,9 @@ async function main() {
       break;
     case "deltab":
       await getDeltaB(sdk);
+      break;
+    case "getprice":
+      await getPrice(sdk);
       break;
     case "help":
     default:
